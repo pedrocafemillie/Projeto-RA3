@@ -7,12 +7,11 @@ public class Empresa {
     private String razaoSocial;
     private String areaAtuacao;
 
-    public Cliente(String nome, String email, String cpf, String telefone, String senha) {
+    public Empresa(String nome, String cnpj, String razaoSocial, String areaAtuacao) {
         this.nome = nome;
-        this.email = email;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        this.senha = senha;
+        this.cnpj = cnpj;
+        this.razaoSocial = razaoSocial;
+        this.areaAtuacao = areaAtuacao;
     }
 
 
@@ -20,18 +19,16 @@ public class Empresa {
         return nome;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCnpj() {
+        return cnpj;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getRazaoSocial() {
+        return razaoSocial;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getAreaAtuacao() {
+        return areaAtuacao;
     }
-    public String getSenha(){
-        return senha;
-    }
+
 }
