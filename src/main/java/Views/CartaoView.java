@@ -12,8 +12,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-
-
 public class CartaoView {
 
     private final ObservableList<Cartao> dados = FXCollections.observableArrayList();
@@ -42,6 +40,8 @@ public class CartaoView {
         Button btnSalvar = new Button("Salvar");
         Button btnExcluir = new Button("Excluir");
         Button btnAtualizar = new Button("Atualizar");
+        Button btnVoltar = new Button("Voltar");
+
 
         // Tabela
         TableView<Cartao> tabela = new TableView<>();
@@ -95,6 +95,8 @@ public class CartaoView {
             }
         });
 
+        btnVoltar.setOnAction(e -> Main.voltarMenu());
+
         // Preencher campos ao selecionar uma linha
         tabela.getSelectionModel().selectedItemProperty().addListener((obs, antigo, novo) -> {
             if (novo != null) {
@@ -145,13 +147,13 @@ public class CartaoView {
                 btnSalvar,
                 btnAtualizar,
                 btnExcluir,
+                btnVoltar,
                 tabela
         );
 
         Scene scene = new Scene(root, 700, 500);
 
-        stage.setTitle("CRUD Cartao");
-        stage.setScene(scene);
-        stage.show();
+        Main.palcoPrincipal.setTitle("CRUD Cartao");
+        Main.palcoPrincipal.setScene(scene);
     }
 }

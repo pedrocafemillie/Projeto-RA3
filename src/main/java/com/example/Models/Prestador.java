@@ -3,16 +3,20 @@ package com.example.Models;
 public class Prestador {
 
     private String nome;
-    private String telefone;
+    private String email;
+    private String cpf;
+    private String senha;
     private String especialidade;
-    private int valor;
+    private String tipo;
 
-    public Cliente(String nome, String email, String cpf, String telefone, String senha) {
+
+    public Prestador(String nome, String email, String cpf, String senha, String especialidade, String tipo) {
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
-        this.telefone = telefone;
         this.senha = senha;
+        this.especialidade = especialidade;
+        this.tipo = tipo;
     }
 
 
@@ -28,10 +32,16 @@ public class Prestador {
         return cpf;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
     public String getSenha(){
         return senha;
     }
+
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
 }

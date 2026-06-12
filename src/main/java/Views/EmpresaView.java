@@ -144,7 +144,7 @@ public class EmpresaView {
 
         Scene scene = new Scene(root, 700, 500);
 
-        Main.palcoPrincipal.setTitle("CRUD Cliente");
+        Main.palcoPrincipal.setTitle("CRUD Empresa");
         Main.palcoPrincipal.setScene(scene);
     }
 }

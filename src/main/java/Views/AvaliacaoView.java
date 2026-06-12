@@ -35,6 +35,8 @@ public class AvaliacaoView {
         Button btnSalvar = new Button("Salvar");
         Button btnExcluir = new Button("Excluir");
         Button btnAtualizar = new Button("Atualizar");
+        Button btnVoltar = new Button("Voltar");
+
 
         // Tabela
         TableView<Avaliacao> tabela = new TableView<>();
@@ -78,6 +80,8 @@ public class AvaliacaoView {
             }
         });
 
+        btnVoltar.setOnAction(e -> Main.voltarMenu());
+
         // Preencher campos ao selecionar uma linha
         tabela.getSelectionModel().selectedItemProperty().addListener((obs, antigo, novo) -> {
             if (novo != null) {
@@ -117,13 +121,13 @@ public class AvaliacaoView {
                 btnSalvar,
                 btnAtualizar,
                 btnExcluir,
+                btnVoltar,
                 tabela
         );
 
         Scene scene = new Scene(root, 700, 500);
 
-        stage.setTitle("CRUD Avaliacao");
-        stage.setScene(scene);
-        stage.show();
+        Main.palcoPrincipal.setTitle("CRUD Avaliacao");
+        Main.palcoPrincipal.setScene(scene);
     }
 }

@@ -2,37 +2,38 @@ package com.example.Models;
 
 public class Servico {
 
+    private String titulo;
     private String descricao;
-    private String categoria;
-    private String cpf;
-    private String telefone;
-    private String senha;
+    private String data;
+    private int valor;
+    private String rua;
 
-    public Cliente(String nome, String email, String cpf, String telefone, String senha) {
-        this.nome = nome;
-        this.email = email;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        this.senha = senha;
+    public Servico(String titulo, String descricao, String data, int valor, String rua) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.data = data;
+        this.valor = valor;
+        this.rua = rua;
     }
 
 
-    public String getNome() {
-        return nome;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getData() {
+        return data;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public int getValor() {
+        return valor;
     }
-    public String getSenha(){
-        return senha;
+
+    public String getRua() {
+        return rua;
     }
 }

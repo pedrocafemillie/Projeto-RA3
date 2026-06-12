@@ -3,35 +3,36 @@ package com.example.Models;
 public class Endereco {
 
     private String rua;
+    private int numero;
     private String bairro;
     private String cep;
-    private String Complemento;
+    private String complemento;
 
-    public Cliente(String nome, String email, String cpf, String telefone, String senha) {
-        this.nome = nome;
-        this.email = email;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        this.senha = senha;
+    public Endereco(String rua, int numero, String bairro, String cep, String complemento) {
+        this.rua = rua;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.cep = cep;
+        this.complemento = complemento;
     }
 
 
-    public String getNome() {
-        return nome;
+    public String getRua() {
+        return rua;
     }
 
-    public String getEmail() {
-        return email;
+    public int getNumero() {
+        return numero;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getBairro() {
+        return bairro;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getCep() {
+        return cep;
     }
-    public String getSenha(){
-        return senha;
+    public String getComplemento(){
+        return complemento;
     }
 }

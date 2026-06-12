@@ -61,6 +61,11 @@ public class Main extends Application {
         btnAvaliacao.setOnAction(e -> new AvaliacaoView().mostrar());
         btnCartao.setOnAction(e -> new CartaoView().mostrar());
         btnCliente.setOnAction(e -> new ClienteView().mostrar());
+        btnEmpresa.setOnAction(e -> new EmpresaView().mostrar());
+        btnEndereco.setOnAction(e -> new EnderecoView().mostrar());
+        btnPrestador.setOnAction(e -> new PrestadorView().mostrar());
+        btnServico.setOnAction(e -> new ServicoView().mostrar());
+        btnTrabalho.setOnAction(e -> new TrabalhoView().mostrar());
 
         VBox root = new VBox(
                 10,
